@@ -1,17 +1,11 @@
-const algosdk = require('algosdk');
-
-const algodToken = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
-const algodServer = 'http://localhost';
-const algodPort = 4002;
+const algo = require('../config');
 
 async function start() {
-    const algodClient = new algosdk.Algodv2(algodToken, algodServer, algodPort);
-
-    const status = await algodClient.status().do();
+    const status = await algo.client.status().do();
 
     console.log('Algorand network status: %o', status);
 
-    const params = await algodClient.getTransactionParams().do();
+    const params = await algo.client.getTransactionParams().do();
 
     console.log('Algorand suggested parameters: %o', params);
 }
