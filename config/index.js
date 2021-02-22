@@ -11,4 +11,5 @@ module.exports = Object.freeze({
     server: algo.server,
     port: algo.port,
     client: new algosdk.Algodv2(algo.token, algo.server, algo.port),
+    sdk: algosdk,
 });

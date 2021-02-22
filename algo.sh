@@ -18,7 +18,7 @@ then
     cd lab1.test-connect-node && node index.js
 elif [[ "$LAB" == "lab2" ]]
 then
-    echo lab2
+    cd lab2.create-account && node index.js
 else
    Help
 fi
