@@ -41,12 +41,6 @@ async function start() {
     } catch (err) {
         console.log(err);
     }
-
-    accountInfo = await algo.client.accountInformation(bob.addr).do();
-    console.log('Bob balance: %d microAlgos', accountInfo.amount);
-
-    accountInfo = await algo.client.accountInformation(aliza.addr).do();
-    console.log('Aliza balance: %d microAlgos', accountInfo.amount);
 }
 
 start();
