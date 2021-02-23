@@ -1,1 +1,48 @@
-# algo.labs
+# ![](./doc/algo.png) Algorand Labs
+
+This project is a learning Algorand. We hope it is helpful to beginners. This project will be compile on **Ubuntu 18.04.4 LTS**.
+
+## Reference
+
+Algorand Developer : https://developer.algorand.org/
+
+## Required Software
+
+-   Node Js [Download](https://nodejs.org/en/)
+-   Git [Download](https://git-scm.com/)
+-   Docker [Download](https://docs.docker.com/engine/install/ubuntu/)
+-   Docker Compose [Download](https://docs.docker.com/compose/install/)
+
+## Required IDE
+
+-   Visual Studio Code (VSCode) [Download](https://code.visualstudio.com/) **extension**
+    -   Prettier [Download](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+    -   Eslint [Download](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+    -   Gitlens [Download](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+## Download
+
+```sh
+git clone https://github.com/ADISAKBOONMARK/algo.labs.git
+```
+
+## Outlines
+
+-   Lab 0 : [Setup Algorand Sandbox.](./lab0.setup-sandbox/README.md)
+-   Lab 1 : [Connect to Node.](./lab1.connect-node/README.md)
+-   Lab 2 : [Create Account.](./lab2.create-account/README.md)
+-   Lab 3 : [Send Algorand to Address.](./lab3.send-algo/README.md)
+
+---
+
+## Donate :pray:
+
+**My Wallet:**
+
+![](./doc/my-wallet.jpg)
+
+**My QR-Code:**
+
+![](./doc/my-qr-code.jpg)
+
+**My Algorand Address:** GQT3W5URGDKYLGZJELLXMKQBIJBDEXFYNGYFIM7JSPY64DTHDKCVYQA3O4
