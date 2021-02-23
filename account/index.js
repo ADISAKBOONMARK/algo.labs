@@ -30,11 +30,11 @@ async function createAccount(name) {
         passphrase: passphrase,
     };
 
-    await fs.writeFile('../account/' + name + '.json', JSON.stringify(data), function (err) {
-        if (err) {
-            console.log(err);
-        }
-    });
+    try {
+        await fs.writeFileSync('../account/' + name + '.json', JSON.stringify(data));
+    } catch (err) {
+        console.log(err);
+    }
 
     console.log('==== end create account ====');
 }
