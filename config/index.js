@@ -52,4 +52,5 @@ module.exports = Object.freeze({
     bob: setBob(),
     aliza: setAliza(),
     sandboxPath: env.parsed.SANDBOX_PATH,
+    masterAddr: env.parsed.MASTER_ADDR,
 });

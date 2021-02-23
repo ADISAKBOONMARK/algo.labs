@@ -1,10 +1,21 @@
 const fs = require('fs');
+const execShPromise = require('exec-sh').promise;
 
 const algo = require('../config');
 
 async function start() {
     await createAccount('bob');
     await createAccount('aliza');
+}
+
+async function addBalance(account) {
+    try {
+        await execShPromise('./sandbox goal clerk send -a 10000000 -f ' + algo.masterAddr + ' -t ' + account.addr, {
+            cwd: algo.sandboxPath,
+        });
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 async function createAccount(name) {
@@ -19,6 +30,8 @@ async function createAccount(name) {
     const passphrase = await algo.sdk.secretKeyToMnemonic(account.sk);
 
     console.log(name + ' passphrase: ' + passphrase);
+
+    await addBalance(account);
 
     const accountInfo = await algo.client.accountInformation(account.addr).do();
 
