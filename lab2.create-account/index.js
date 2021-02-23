@@ -5,13 +5,15 @@ async function start() {
 
     console.log('My address: ' + account.addr);
 
+    console.log('My sk: ' + account.sk);
+
     const passphrase = await algo.sdk.secretKeyToMnemonic(account.sk);
 
     console.log('My passphrase: ' + passphrase);
 
     const accountInfo = await algo.client.accountInformation(account.addr).do();
 
-    console.log('Account balance: %d microAlgos', accountInfo.amount);
+    console.log('My balance: %d microAlgos', accountInfo.amount);
 }
 
 start();
