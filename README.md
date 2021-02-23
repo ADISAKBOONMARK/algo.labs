@@ -33,6 +33,24 @@ git clone https://github.com/ADISAKBOONMARK/algo.labs.git
 -   Lab 2 : [Create Account.](./lab2.create-account/README.md)
 -   Lab 3 : [Send Algorand to Address.](./lab3.send-algo/README.md)
 
+## Command
+
+```sh
+./algo.sh
+
+Add a description of the script commands here.
+
+command options:
+
+account       -> Manage accounts.
+- create      -> Create accounts. [Bob, Aliza]
+- balance     -> Check balance accounts. [Bob, Aliza]
+
+lab1          -> Connection to node.
+lab2          -> Create account.
+lab3          -> Send Algo.
+```
+
 ---
 
 ## Donate :pray:

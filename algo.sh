@@ -4,10 +4,16 @@ commandHelp()
 {
     # Display Help
     echo "Add a description of the script commands here."
+    echo
     echo "command options:"
-    echo "account    -> Manage accounts."
-    echo "lab1       -> Connection to node."
-    echo "lab2       -> Create account."
+    echo
+    echo "account       -> Manage accounts."
+    echo "- create      -> Create accounts. [Bob, Aliza]"
+    echo "- balance     -> Check balance accounts. [Bob, Aliza]"
+    echo
+    echo "lab1          -> Connection to node."
+    echo "lab2          -> Create account."
+    echo "lab3          -> Send Algo."
     echo
 }
 
@@ -15,9 +21,11 @@ accountFunctionHelp()
 {
     # Display Help
     echo "Add a description of the script functions here."
+    echo
     echo "function options:"
-    echo "create     -> Create accounts. [Bob, Aliza]"
-    echo "balance    -> Check balance accounts. [Bob, Aliza]"
+    echo
+    echo "create        -> Create accounts. [Bob, Aliza]"
+    echo "balance       -> Check balance accounts. [Bob, Aliza]"
     echo
 }
 
