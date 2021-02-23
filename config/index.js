@@ -49,8 +49,8 @@ module.exports = Object.freeze({
     port: algo.port,
     client: new algosdk.Algodv2(algo.token, algo.server, algo.port),
     sdk: algosdk,
-    bob: setBob(),
-    aliza: setAliza(),
+    bob: setBob,
+    aliza: setAliza,
     sandboxPath: env.parsed.SANDBOX_PATH,
     masterAddr: env.parsed.MASTER_ADDR,
 });

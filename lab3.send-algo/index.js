@@ -1,16 +1,17 @@
 const algo = require('../config');
 
 async function start() {
-    const bobAccount = await algo.sdk.generateAccount();
-    console.log('Bob address: ' + bobAccount.addr);
+    const bob = await algo.bob();
+    const aliza = await algo.aliza();
 
-    let accountInfo = await algo.client.accountInformation(bobAccount.addr).do();
+    console.log('Bob address: ' + bob.addr);
+
+    let accountInfo = await algo.client.accountInformation(bob.addr).do();
     console.log('Bob balance: %d microAlgos', accountInfo.amount);
 
-    const alizaAccount = await algo.sdk.generateAccount();
-    console.log('Aliza address: ' + alizaAccount.addr);
+    console.log('Aliza address: ' + aliza.addr);
 
-    accountInfo = await algo.client.accountInformation(alizaAccount.addr).do();
+    accountInfo = await algo.client.accountInformation(aliza.addr).do();
     console.log('Aliza balance: %d microAlgos', accountInfo.amount);
 
     const params = await algo.client.getTransactionParams().do();
@@ -21,15 +22,17 @@ async function start() {
 
     const note = await algo.sdk.encodeObj('Hello World');
     const txn = await algo.sdk.makePaymentTxnWithSuggestedParams(
-        bobAccount.addr,
-        alizaAccount.addr,
+        bob.addr,
+        aliza.addr,
         1000000,
         undefined,
         note,
         params,
     );
 
-    const signedTxn = await txn.signTxn(bobAccount.sk);
+    const sk = new Uint8Array(bob.sk.split(','));
+    const signedTxn = await txn.signTxn(sk);
+
     const txId = await txn.txID().toString();
     console.log('Bob signed a transaction with txID: %s', txId);
 
@@ -39,12 +42,10 @@ async function start() {
         console.log(err);
     }
 
-    accountInfo = await algo.client.accountInformation(bobAccount.addr).do();
+    accountInfo = await algo.client.accountInformation(bob.addr).do();
     console.log('Bob balance: %d microAlgos', accountInfo.amount);
 
-    accountInfo = await algo.client
-        .accountInformation('EOOF2JJ3SOBNO7KFD5YDYVNKXTJJELNFXEJYOIAN5ZSKMB3QWBL4MQCSMU')
-        .do();
+    accountInfo = await algo.client.accountInformation(aliza.addr).do();
     console.log('Aliza balance: %d microAlgos', accountInfo.amount);
 }
 
