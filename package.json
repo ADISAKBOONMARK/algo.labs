@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "algosdk": "^1.8.1"
+    "algosdk": "^1.8.1",
+    "dotenv": "^8.2.0",
+    "fs": "0.0.1-security"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
