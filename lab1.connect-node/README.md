@@ -46,4 +46,4 @@ Algorand suggested parameters: {
 }
 ```
 
-**Completed lab 2** :nerd_face:
+**Completed lab 1** :nerd_face:
