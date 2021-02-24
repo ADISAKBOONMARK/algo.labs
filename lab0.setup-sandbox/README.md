@@ -72,4 +72,4 @@ f967e72404a2        postgres:13-alpine    "docker-entrypoint.s…"   3 hours ago
 ece8da1eab24        algosandbox_algod     "/opt/start_algod.sh"    3 hours ago         Up 14 minutes       0.0.0.0:4001-4002->4001-4002/tcp   algorand-sandbox-algod
 ```
 
-**Completed lab 1** :nerd_face:
+**Completed lab 0** :nerd_face:
