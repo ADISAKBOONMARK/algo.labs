@@ -11,13 +11,14 @@ const algo = {
 
 async function setBob() {
     let bob = {
+        name: 'Bob',
         addr: 'xxxx',
         sk: 'xxxx',
         passphrase: 'xxxx',
     };
 
     try {
-        const data = fs.readFileSync('../account/bob.json', 'utf8');
+        const data = fs.readFileSync('../account/Bob.json', 'utf8');
         bob = JSON.parse(data);
     } catch (err) {
         // console.log(err);
@@ -28,13 +29,14 @@ async function setBob() {
 
 async function setAliza() {
     let aliza = {
+        name: 'Aliza',
         addr: 'xxxx',
         sk: 'xxxx',
         passphrase: 'xxxx',
     };
 
     try {
-        const data = fs.readFileSync('../account/aliza.json', 'utf8');
+        const data = fs.readFileSync('../account/Aliza.json', 'utf8');
         aliza = JSON.parse(data);
     } catch (err) {
         // console.log(err);

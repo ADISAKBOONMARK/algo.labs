@@ -4,16 +4,16 @@ async function start() {
     const bob = await algo.bob();
     const aliza = await algo.aliza();
 
-    await checkBalance('Bob', bob);
-    await checkBalance('Aliza', aliza);
+    await checkBalance(bob);
+    await checkBalance(aliza);
 }
 
-async function checkBalance(name, account) {
-    console.log(name + ' address: ' + account.addr);
+async function checkBalance(account) {
+    console.log(account.name + ' address: ' + account.addr);
 
     const accountInfo = await algo.client.accountInformation(account.addr).do();
 
-    console.log(name + ' balance: %d microAlgos', accountInfo.amount);
+    console.log(account.name + ' balance: %d microAlgos', accountInfo.amount);
 }
 
 start();

@@ -4,8 +4,8 @@ const execShPromise = require('exec-sh').promise;
 const algo = require('../config');
 
 async function start() {
-    await createAccount('bob');
-    await createAccount('aliza');
+    await createAccount('Bob');
+    await createAccount('Aliza');
 }
 
 async function addBalance(account) {
@@ -38,6 +38,7 @@ async function createAccount(name) {
     console.log(name + ' balance: %d microAlgos', accountInfo.amount);
 
     const data = {
+        name: name,
         addr: account.addr,
         sk: account.sk.toString(),
         passphrase: passphrase,
