@@ -2,7 +2,7 @@
 
 This lab is a test connection to the Algorand node. When you set up the Algorand sandbox is done.
 
-## Step 1: Start Lab
+## Step 1 : Start Lab
 
 ```sh
 cd algo.labs

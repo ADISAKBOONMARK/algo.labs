@@ -4,7 +4,7 @@ Before when you start learning labs. You will setup the Algorand sandbox.
 
 You can make it by flow step from [Algorand Sandbox](https://github.com/algorand/sandbox).
 
-## Step 1: Download Sandbox
+## Step 1 : Download Sandbox
 
 -   You must be clone the Algorand Sandbox to your server by the command below.
 
@@ -12,7 +12,7 @@ You can make it by flow step from [Algorand Sandbox](https://github.com/algorand
 git clone https://github.com/algorand/sandbox.git
 ```
 
-## Step 2: Start Sandbox
+## Step 2 : Start Sandbox
 
 -   When you install the Algorand sandbox completely. Now you all ready to start it by the command below.
 
@@ -21,7 +21,7 @@ cd sandbox
 ./sandbox up
 ```
 
-## Step 3: Check Sandbox is All Ready
+## Step 3 : Check Sandbox is All Ready
 
 -   If you start the Algorand Sandbox is completed you should similar the result below.
 
