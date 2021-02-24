@@ -2,7 +2,7 @@
 
 This lab is a test create Algorand account.
 
-## Step 1: Start Lab
+## Step 1 : Start Lab
 
 ```sh
 cd algo.labs
