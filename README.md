@@ -26,6 +26,38 @@ Algorand Developer : https://developer.algorand.org/
 git clone https://github.com/ADISAKBOONMARK/algo.labs.git
 ```
 
+## Setting
+
+-   Install node package.
+
+```sh
+cd algo.labs
+./npm i
+```
+
+-   Create **.env** file.
+
+```sh
+SANDBOX_PATH=/home/users/
+MASTER_ADDR=HJATUIYSNT2NI6WAOE6TRWBUJFBDM5RPYOGIRZPYXF3U2OPHFTV3NCVIKM
+```
+
+> SANDBOX_PATH : Path of [Algorand Sandbox.](./lab0.setup-sandbox/README.md) directory.
+
+```sh
+cd sandbox
+pwd
+```
+
+> MASTER_ADDR : Address of master account.
+
+```sh
+./sandbox goal account list
+...
+[online] HJATUIYSNT2NI6WAOE6TRWBUJFBDM5RPYOGIRZPYXF3U2OPHFTV3NCVIKM HJATUIYSNT2NI6WAOE6TRWBUJFBDM5RPYOGIRZPYXF3U2OPHFTV3NCVIKM 4000000000000000 microAlgos
+...
+```
+
 ## Outlines
 
 -   Lab 0 : [Setup Algorand Sandbox.](./lab0.setup-sandbox/README.md)
