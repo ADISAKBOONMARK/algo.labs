@@ -1,4 +1,4 @@
-# Lab 0 : Connect to Node.
+# Lab 1 : Connect to Node.
 
 This lab is a test connection to the Algorand node. When you set up the Algorand sandbox is done.
 
