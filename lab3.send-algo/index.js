@@ -38,6 +38,8 @@ async function start() {
 
     try {
         await algo.client.sendRawTransaction(signedTxn).do();
+        console.log('Bob send 1000000 microAlgos to Aliza that has a fee of just 1000 microAlgos.');
+        console.log('wait to 5 - 10 sec. and try to check the balance of Bob and Aliza again.');
     } catch (err) {
         console.log(err);
     }
