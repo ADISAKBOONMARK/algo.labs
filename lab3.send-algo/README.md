@@ -119,7 +119,7 @@ Successfully submitting your transaction to the network does not necessarily mea
 
 On Algorand, transactions are final as soon as they are incorporated into a block and blocks are produced, on average, every 5 seconds. This means that transactions are confirmed, on average, in 5 seconds! Read more about the [Algorand's Consensus Protocol](https://developer.algorand.org/docs/algorand_consensus/) and how it achieves such high confirmation speeds and immediate transaction finality.
 
--   Check the balance again.
+## Step 3 : Check the balance.
 
 ```sh
 cd algo.labs
