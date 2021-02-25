@@ -79,6 +79,10 @@ async function start() {
         const txId = await txn.txID().toString();
         console.log(fromAccount.name + ' signed a transaction with txID: %s', txId);
 
+        console.log(
+            `Sent ${microAlgos} microAlgos from account ${fromAccount.addr} to address ${toAccount.addr}, transaction ID: ${txId}. Fee set to ${params.fee} microAlgos`,
+        );
+
         try {
             await algodClient.sendRawTransaction(signedTxn).do();
 
