@@ -1,6 +1,62 @@
 # Lab 4 : Wait for Confirmation.
 
-This lab is a learn about the behavior of the waitForConfirmation function.
+This lab is a learn about the behavior of the **waitForConfirmation** function.
+
+```javascript
+// Utility function to wait on a transaction to be confirmed
+// The timeout parameter indicates how many rounds do you wish to check pending transactions for
+
+const waitForConfirmation = async function (algodclient, txId, timeout) {
+    // Wait until the transaction is confirmed or rejected, or until 'timeout' number of rounds has passed.
+    //
+    // Args:
+    //      txId(str): the transaction to wait for
+    //      timeout(int): maximum number of rounds to wait
+    //
+    // Returns:
+    //      pending transaction information, or throws an error if the transaction is not confirmed or rejected in the next timeout rounds
+
+    if (algodclient == null || txId == null || timeout < 0) {
+        throw new Error('Bad arguments.');
+    }
+
+    const status = await algodclient.status().do();
+
+    if (status === undefined) throw new Error('Unable to get node status');
+
+    const startround = status['last-round'] + 1;
+
+    let currentround = startround;
+
+    while (currentround < startround + timeout) {
+        const pendingInfo = await algodclient.pendingTransactionInformation(txId).do();
+
+        if (pendingInfo !== undefined) {
+            if (pendingInfo['confirmed-round'] !== null && pendingInfo['confirmed-round'] > 0) {
+                // Got the completed Transaction
+                return pendingInfo;
+            } else {
+                if (pendingInfo['pool-error'] != null && pendingInfo['pool-error'].length > 0) {
+                    // If there was a pool error, then the transaction has been rejected!
+                    throw new Error('Transaction Rejected' + ' pool error' + pendingInfo['pool-error']);
+                }
+            }
+        }
+
+        await algodclient.statusAfterBlock(currentround).do();
+
+        currentround++;
+    }
+
+    throw new Error('Transaction not confirmed after ' + timeout + ' rounds!');
+};
+```
+
+**NOTE** :
+
+Successfully submitting your transaction to the network does not necessarily mean the network confirmed it. Always check that the network confirmed your transaction within a block before proceeding.
+
+On Algorand, transactions are final as soon as they are incorporated into a block and blocks are produced, on average, every 5 seconds. This means that transactions are confirmed, on average, in 5 seconds! Read more about the [Algorand's Consensus Protocol](https://developer.algorand.org/docs/algorand_consensus/) and how it achieves such high confirmation speeds and immediate transaction finality.
 
 ## Step 1 : Start Lab
 
