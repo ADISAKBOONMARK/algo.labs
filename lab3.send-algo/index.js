@@ -4,15 +4,15 @@ async function start() {
     const bob = await algo.bob();
     const aliza = await algo.aliza();
 
-    console.log('Bob address: ' + bob.addr);
+    console.log(bob.name + ' address: ' + bob.addr);
 
     let accountInfo = await algo.client.accountInformation(bob.addr).do();
-    console.log('Bob balance: %d microAlgos', accountInfo.amount);
+    console.log(bob.name + ' balance: %d microAlgos', accountInfo.amount);
 
-    console.log('Aliza address: ' + aliza.addr);
+    console.log(aliza.name + ' address: ' + aliza.addr);
 
     accountInfo = await algo.client.accountInformation(aliza.addr).do();
-    console.log('Aliza balance: %d microAlgos', accountInfo.amount);
+    console.log(aliza.name + ' balance: %d microAlgos', accountInfo.amount);
 
     const params = await algo.client.getTransactionParams().do();
 
