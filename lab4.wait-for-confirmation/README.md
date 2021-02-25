@@ -6,7 +6,7 @@ This lab is a learn about the behavior of the **waitForConfirmation** function.
 // Utility function to wait on a transaction to be confirmed
 // The timeout parameter indicates how many rounds do you wish to check pending transactions for
 
-const waitForConfirmation = async function (algodclient, txId, timeout) {
+const waitForConfirmation = async function (algodClient, txId, timeout) {
     // Wait until the transaction is confirmed or rejected, or until 'timeout' number of rounds has passed.
     //
     // Args:
@@ -16,11 +16,11 @@ const waitForConfirmation = async function (algodclient, txId, timeout) {
     // Returns:
     //      pending transaction information, or throws an error if the transaction is not confirmed or rejected in the next timeout rounds
 
-    if (algodclient == null || txId == null || timeout < 0) {
+    if (algodClient == null || txId == null || timeout < 0) {
         throw new Error('Bad arguments.');
     }
 
-    const status = await algodclient.status().do();
+    const status = await algodClient.status().do();
 
     if (status === undefined) throw new Error('Unable to get node status');
 
@@ -29,7 +29,7 @@ const waitForConfirmation = async function (algodclient, txId, timeout) {
     let currentround = startround;
 
     while (currentround < startround + timeout) {
-        const pendingInfo = await algodclient.pendingTransactionInformation(txId).do();
+        const pendingInfo = await algodClient.pendingTransactionInformation(txId).do();
 
         if (pendingInfo !== undefined) {
             if (pendingInfo['confirmed-round'] !== null && pendingInfo['confirmed-round'] > 0) {
@@ -43,7 +43,7 @@ const waitForConfirmation = async function (algodclient, txId, timeout) {
             }
         }
 
-        await algodclient.statusAfterBlock(currentround).do();
+        await algodClient.statusAfterBlock(currentround).do();
 
         currentround++;
     }
