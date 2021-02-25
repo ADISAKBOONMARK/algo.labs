@@ -65,7 +65,7 @@ pwd
 -   Lab 1 : [Connect to Node.](./lab1.connect-node/README.md)
 -   Lab 2 : [Create Account.](./lab2.create-account/README.md)
 -   Lab 3 : [Send Algorand to Address.](./lab3.send-algo/README.md)
--   Lab 4 : [Wait for Confrimation.](./lab4.wait-for-confirmation/README.md)
+-   Lab 4 : [Wait for Confirmation.](./lab4.wait-for-confirmation/README.md)
 
 ## Command
 
