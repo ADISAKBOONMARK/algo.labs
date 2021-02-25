@@ -110,7 +110,7 @@ Bob signed a transaction with txID: ZROHIY2MU5OBMQH7YZXS3SGURY3X6I5C6KFK73NTZTZL
 
 Bob send 1000000 microAlgos to Aliza that has a fee of just 1000 microAlgos.
 
-wait to 5 - 10 sec. and try to check the balance of Bob and Aliza again.
+Wait to 5 - 10 sec. and try to check the balance of Bob and Aliza again.
 ```
 
 **NOTE** :
