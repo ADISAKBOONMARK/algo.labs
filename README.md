@@ -87,6 +87,12 @@ lab2          -> Create account.
 lab3          -> Send Algo.
 lab4          -> Wait for Confirmation.
 lab5          -> Read the Transaction.
+
+sandbox       -> Manage sandbox.
+- start       -> Start Algorand Sandbox.
+- stop        -> Stop Algorand Sandbox.
+- restart     -> Restart Algorand Sandbox.
+- status      -> Status Algorand Sandbox.
 ```
 
 ---

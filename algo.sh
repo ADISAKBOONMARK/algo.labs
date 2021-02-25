@@ -18,6 +18,12 @@ commandHelp()
     echo "lab4          -> Wait for Confirmation."
     echo "lab5          -> Read the Transaction."
     echo
+    echo "sandbox       -> Manage sandbox."
+    echo "- start       -> Start Algorand Sandbox."
+    echo "- stop        -> Stop Algorand Sandbox."
+    echo "- restart     -> Restart Algorand Sandbox."
+    echo "- status      -> Status Algorand Sandbox."
+    
 }
 
 accountFunctionHelp()
@@ -33,6 +39,19 @@ accountFunctionHelp()
     echo
 }
 
+sandboxFunctionHelp()
+{
+    # Display Help
+    echo "Add a description of the script functions here."
+    echo
+    echo "function options:"
+    echo
+    echo "start         -> Start Algorand Sandbox."
+    echo "stop          -> Stop Algorand Sandbox."
+    echo "restart       -> Restart Algorand Sandbox."
+    echo "status        -> Status Algorand Sandbox."
+    echo
+}
 
 COMMAND="${1:-none}"
 FUNCTION="${2:-none}"
@@ -71,6 +90,24 @@ then
 elif [[ "$COMMAND" == "lab5" ]]
 then
     cd lab5.read-transaction && node index.js
+
+elif [[ "$COMMAND" == "sandbox" ]]
+then
+    if [[ "$FUNCTION" == "start" ]]
+    then
+        cd sandbox && node start.js
+    elif [[ "$FUNCTION" == "stop" ]]
+    then
+        cd sandbox && node stop.js
+    elif [[ "$FUNCTION" == "restart" ]]
+    then
+        cd sandbox && node restart.js
+    elif [[ "$FUNCTION" == "status" ]]
+    then
+        cd sandbox && node status.js
+    else
+        sandboxFunctionHelp
+    fi
 
 else
    commandHelp
