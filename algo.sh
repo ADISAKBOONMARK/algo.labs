@@ -15,7 +15,8 @@ commandHelp()
     echo "lab1          -> Connection to node."
     echo "lab2          -> Create account."
     echo "lab3          -> Send Algo."
-    echo "lab4          -> Wait For Confirmation."
+    echo "lab4          -> Wait for Confirmation."
+    echo "lab5          -> Read the Transaction."
     echo
 }
 
@@ -66,6 +67,10 @@ then
 elif [[ "$COMMAND" == "lab4" ]]
 then
     cd lab4.wait-for-confirmation && node index.js
+
+elif [[ "$COMMAND" == "lab5" ]]
+then
+    cd lab5.read-transaction && node index.js
 
 else
    commandHelp
