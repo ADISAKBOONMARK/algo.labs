@@ -145,7 +145,7 @@ Aliza balance: 11000010 microAlgos
 
 **WARNING** : :warning:
 
-When amount the microAlgos is not enough. Please use the Pump!! service.
+When amount the microAlgos is not enough. Please use the **Pump!!** service.
 
 ```sh
 cd algo.labs
