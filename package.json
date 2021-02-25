@@ -12,8 +12,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "adisak.b",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
