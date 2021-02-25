@@ -10,10 +10,12 @@ commandHelp()
     echo "account       -> Manage accounts."
     echo "- create      -> Create accounts. [Bob, Aliza]"
     echo "- balance     -> Check balance accounts. [Bob, Aliza]"
+    echo "- pump        -> Add balance to accounts. [Bob, Aliza]"
     echo
     echo "lab1          -> Connection to node."
     echo "lab2          -> Create account."
     echo "lab3          -> Send Algo."
+    echo "lab4          -> Wait For Confirmation."
     echo
 }
 
@@ -26,6 +28,7 @@ accountFunctionHelp()
     echo
     echo "create        -> Create accounts. [Bob, Aliza]"
     echo "balance       -> Check balance accounts. [Bob, Aliza]"
+    echo "pump          -> Add balance to accounts. [Bob, Aliza]"
     echo
 }
 
@@ -41,6 +44,9 @@ then
     elif [[ "$FUNCTION" == "balance" ]]
     then
         cd account && node balance.js
+    elif [[ "$FUNCTION" == "pump" ]]
+    then
+        cd account && node pump.js
     else
         accountFunctionHelp
     fi
@@ -56,6 +62,10 @@ then
 elif [[ "$COMMAND" == "lab3" ]]
 then
     cd lab3.send-algo && node index.js
+
+elif [[ "$COMMAND" == "lab4" ]]
+then
+    cd lab4.wait-for-confirmation && node index.js
 
 else
    commandHelp
