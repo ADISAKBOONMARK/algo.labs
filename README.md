@@ -38,8 +38,17 @@ cd algo.labs
 -   Create **.env** file.
 
 ```sh
+LABS_PATH=/home/users/algo.labs
+
 SANDBOX_PATH=/home/users/
 MASTER_ADDR=HJATUIYSNT2NI6WAOE6TRWBUJFBDM5RPYOGIRZPYXF3U2OPHFTV3NCVIKM
+```
+
+> LABS_PATH : Path of Algorand Labs directory.
+
+```sh
+cd algo.labs
+pwd
 ```
 
 > SANDBOX_PATH : Path of [Algorand Sandbox.](./lab0.setup-sandbox/README.md) directory.
@@ -69,6 +78,7 @@ pwd
     -   Lab 3 : [Send Algorand to Address.](./lab3.send-algo/README.md)
     -   Lab 4 : [Wait for Confirmation.](./lab4.wait-for-confirmation/README.md)
     -   Lab 5 : [Read the Transaction.](./lab5.read-transaction/README.md)
+-   Smart Contracts
 
 ## Command
 
