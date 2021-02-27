@@ -61,12 +61,14 @@ pwd
 
 ## Outlines
 
--   Lab 0 : [Setup Algorand Sandbox.](./lab0.setup-sandbox/README.md)
--   Lab 1 : [Connect to Node.](./lab1.connect-node/README.md)
--   Lab 2 : [Create Account.](./lab2.create-account/README.md)
--   Lab 3 : [Send Algorand to Address.](./lab3.send-algo/README.md)
--   Lab 4 : [Wait for Confirmation.](./lab4.wait-for-confirmation/README.md)
--   Lab 5 : [Read the Transaction.](./lab5.read-transaction/README.md)
+-   Local Network
+    -   Lab 0 : [Setup Algorand Sandbox.](./lab0.setup-sandbox/README.md)
+-   SDK
+    -   Lab 1 : [Connect to Node.](./lab1.connect-node/README.md)
+    -   Lab 2 : [Create Account.](./lab2.create-account/README.md)
+    -   Lab 3 : [Send Algorand to Address.](./lab3.send-algo/README.md)
+    -   Lab 4 : [Wait for Confirmation.](./lab4.wait-for-confirmation/README.md)
+    -   Lab 5 : [Read the Transaction.](./lab5.read-transaction/README.md)
 
 ## Command
 
