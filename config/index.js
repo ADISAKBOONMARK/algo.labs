@@ -4,9 +4,15 @@ const fs = require('fs');
 const algosdk = require('algosdk');
 
 const algo = {
-    token: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-    server: 'http://localhost',
-    port: 4001,
+    token: env.parsed.ALGO_TOKEN || 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    server: env.parsed.ALGO_SERVER || 'http://localhost',
+    port: env.parsed.ALGO_PORT || 4001,
+};
+
+const kmd = {
+    token: env.parsed.KMD_TOKEN || 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    server: env.parsed.KMD_SERVER || 'http://localhost',
+    port: env.parsed.KMD_PORT || 4002,
 };
 
 async function setBob() {
@@ -50,6 +56,7 @@ module.exports = Object.freeze({
     server: algo.server,
     port: algo.port,
     client: new algosdk.Algodv2(algo.token, algo.server, algo.port),
+    kmd: new algosdk.Kmd(kmd.token, kmd.server, kmd.port),
     sdk: algosdk,
     bob: setBob,
     aliza: setAliza,
