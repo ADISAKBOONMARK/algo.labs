@@ -89,6 +89,12 @@ Add a description of the script commands here.
 
 command options:
 
+sandbox       -> Manage sandbox.
+- start       -> Start Algorand Sandbox.
+- stop        -> Stop Algorand Sandbox.
+- restart     -> Restart Algorand Sandbox.
+- status      -> Status Algorand Sandbox.
+
 account       -> Manage accounts.
 - create      -> Create accounts. [Bob, Aliza]
 - balance     -> Check balance accounts. [Bob, Aliza]
@@ -99,12 +105,6 @@ lab2          -> Create account.
 lab3          -> Send Algo.
 lab4          -> Wait for Confirmation.
 lab5          -> Read the Transaction.
-
-sandbox       -> Manage sandbox.
-- start       -> Start Algorand Sandbox.
-- stop        -> Stop Algorand Sandbox.
-- restart     -> Restart Algorand Sandbox.
-- status      -> Status Algorand Sandbox.
 ```
 
 ---

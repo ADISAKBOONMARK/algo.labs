@@ -7,6 +7,12 @@ commandHelp()
     echo
     echo "command options:"
     echo
+    echo "sandbox       -> Manage sandbox."
+    echo "- start       -> Start Algorand Sandbox."
+    echo "- stop        -> Stop Algorand Sandbox."
+    echo "- restart     -> Restart Algorand Sandbox."
+    echo "- status      -> Status Algorand Sandbox."
+    echo
     echo "account       -> Manage accounts."
     echo "- create      -> Create accounts. [Bob, Aliza]"
     echo "- balance     -> Check balance accounts. [Bob, Aliza]"
@@ -17,13 +23,7 @@ commandHelp()
     echo "lab3          -> Send Algo."
     echo "lab4          -> Wait for Confirmation."
     echo "lab5          -> Read the Transaction."
-    echo
-    echo "sandbox       -> Manage sandbox."
-    echo "- start       -> Start Algorand Sandbox."
-    echo "- stop        -> Stop Algorand Sandbox."
-    echo "- restart     -> Restart Algorand Sandbox."
-    echo "- status      -> Status Algorand Sandbox."
-    
+    echo    
 }
 
 accountFunctionHelp()
@@ -56,7 +56,25 @@ sandboxFunctionHelp()
 COMMAND="${1:-none}"
 FUNCTION="${2:-none}"
 
-if [[ "$COMMAND" == "account" ]]
+if [[ "$COMMAND" == "sandbox" ]]
+then
+    if [[ "$FUNCTION" == "start" ]]
+    then
+        cd sandbox && node start.js
+    elif [[ "$FUNCTION" == "stop" ]]
+    then
+        cd sandbox && node stop.js
+    elif [[ "$FUNCTION" == "restart" ]]
+    then
+        cd sandbox && node restart.js
+    elif [[ "$FUNCTION" == "status" ]]
+    then
+        cd sandbox && node status.js
+    else
+        sandboxFunctionHelp
+    fi
+
+elif [[ "$COMMAND" == "account" ]]
 then
     if [[ "$FUNCTION" == "create" ]]
     then
@@ -90,24 +108,6 @@ then
 elif [[ "$COMMAND" == "lab5" ]]
 then
     cd lab5.read-transaction && node index.js
-
-elif [[ "$COMMAND" == "sandbox" ]]
-then
-    if [[ "$FUNCTION" == "start" ]]
-    then
-        cd sandbox && node start.js
-    elif [[ "$FUNCTION" == "stop" ]]
-    then
-        cd sandbox && node stop.js
-    elif [[ "$FUNCTION" == "restart" ]]
-    then
-        cd sandbox && node restart.js
-    elif [[ "$FUNCTION" == "status" ]]
-    then
-        cd sandbox && node status.js
-    else
-        sandboxFunctionHelp
-    fi
 
 else
    commandHelp
