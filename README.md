@@ -78,6 +78,8 @@ pwd
     -   Lab 3 : [Send Algorand to Address.](./lab3.send-algo/README.md)
     -   Lab 4 : [Wait for Confirmation.](./lab4.wait-for-confirmation/README.md)
     -   Lab 5 : [Read the Transaction.](./lab5.read-transaction/README.md)
+-   KMD
+    -   Lab 6 : [Create a wallet and generate an account.](./lab6.create-wallet/README.md)
 -   Smart Contracts
 
 ## Command
