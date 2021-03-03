@@ -3,8 +3,6 @@
 This lab is a learn about the behavior of reading the transaction.
 
 ```javascript
-...
-
 // Get the completed Transaction
 console.log('Transaction ' + txId + ' confirmed in round ' + confirmedTxn['confirmed-round']);
 
