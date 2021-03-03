@@ -7,6 +7,7 @@
     "algosdk": "^1.8.1",
     "dotenv": "^8.2.0",
     "exec-sh": "^0.3.4",
+    "faker": "^5.4.0",
     "fs": "0.0.1-security"
   },
   "scripts": {
