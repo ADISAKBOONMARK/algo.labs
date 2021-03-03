@@ -24,6 +24,7 @@ commandHelp()
     echo "lab4          -> Wait for Confirmation."
     echo "lab5          -> Read the Transaction."
     echo "lab6          -> Create a wallet and generate an account."
+    echo "lab7          -> Import an account."
     echo    
 }
 
@@ -113,6 +114,10 @@ then
 elif [[ "$COMMAND" == "lab6" ]]
 then
     cd lab6.create-wallet && node index.js
+
+elif [[ "$COMMAND" == "lab7" ]]
+then
+    cd lab7.import-account && node index.js
 
 else
    commandHelp

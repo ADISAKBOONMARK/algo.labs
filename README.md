@@ -80,6 +80,7 @@ pwd
     -   Lab 5 : [Read the Transaction.](./lab5.read-transaction/README.md)
 -   KMD
     -   Lab 6 : [Create a wallet and generate an account.](./lab6.create-wallet/README.md)
+    -   Lab 7 : [Import an account.](./lab7.import-account/README.md)
 -   Smart Contracts
 
 ## Command
@@ -108,6 +109,7 @@ lab3          -> Send Algo.
 lab4          -> Wait for Confirmation.
 lab5          -> Read the Transaction.
 lab6          -> Create a wallet and generate an account.
+lab7          -> Import an account.
 ```
 
 ---
