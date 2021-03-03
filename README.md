@@ -105,6 +105,7 @@ lab2          -> Create account.
 lab3          -> Send Algo.
 lab4          -> Wait for Confirmation.
 lab5          -> Read the Transaction.
+lab6          -> Create a wallet and generate an account.
 ```
 
 ---
