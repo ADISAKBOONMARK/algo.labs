@@ -81,6 +81,7 @@ pwd
 -   KMD
     -   Lab 6 : [Create a wallet and generate an account.](./lab6.create-wallet/README.md)
     -   Lab 7 : [Import an account.](./lab7.import-account/README.md)
+    -   Lab 8 : [Export an account.](./lab8.export-account/README.md)
 -   Smart Contracts
 
 ## Command
@@ -110,6 +111,7 @@ lab4          -> Wait for Confirmation.
 lab5          -> Read the Transaction.
 lab6          -> Create a wallet and generate an account.
 lab7          -> Import an account.
+lab8          -> Export an account.
 ```
 
 ---
