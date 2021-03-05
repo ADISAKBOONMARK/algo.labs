@@ -1,6 +1,6 @@
 # Lab 8 : Export an account.
 
-This lab is a learn about the behavior of import an account.
+This lab is a learn about the behavior of export an account.
 
 ```javascript
 //= ============ Export an account =============//
