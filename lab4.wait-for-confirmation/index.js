@@ -73,7 +73,7 @@ async function start() {
             params,
         );
 
-        const sk = new Uint8Array(bob.sk.split(','));
+        const sk = new Uint8Array(fromAccount.sk.split(','));
         const signedTxn = await txn.signTxn(sk);
 
         const txId = await txn.txID().toString();
