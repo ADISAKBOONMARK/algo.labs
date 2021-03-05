@@ -1,6 +1,9 @@
 const algo = require('../config');
 
 async function start() {
+    const bob = await algo.bob();
+    const aliza = await algo.aliza();
+
     const checkBalance = async function (algodClient, account) {
         console.log(account.name + ' address: ' + account.addr);
 
@@ -41,13 +44,25 @@ async function start() {
             console.log(
                 `Wait to 5 - 10 sec. and try to check the balance of ${fromAccount.name} and ${toAccount.name} again.`,
             );
+
+            const P = ['.'];
+            let x = 0;
+            const loader = setInterval(() => {
+                process.stdout.write(`${P[x++]}`);
+                x %= P.length;
+            }, 250);
+
+            setTimeout(async () => {
+                clearInterval(loader);
+                console.log();
+
+                await checkBalance(algo.client, bob);
+                await checkBalance(algo.client, aliza);
+            }, 10000);
         } catch (err) {
             console.log(err);
         }
     };
-
-    const bob = await algo.bob();
-    const aliza = await algo.aliza();
 
     await checkBalance(algo.client, bob);
     await checkBalance(algo.client, aliza);
