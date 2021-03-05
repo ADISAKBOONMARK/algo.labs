@@ -82,7 +82,9 @@ pwd
     -   Lab 6 : [Create a wallet and generate an account.](./lab6.create-wallet/README.md)
     -   Lab 7 : [Import an account.](./lab7.import-account/README.md)
     -   Lab 8 : [Export an account.](./lab8.export-account/README.md)
+    -   Lab 9 : [Recover wallet and regenerate account.](./lab9.recover-wallet/README.md)
 -   Smart Contracts
+    -   Lab X : ...
 
 ## Command
 
@@ -112,6 +114,7 @@ lab5          -> Read the Transaction.
 lab6          -> Create a wallet and generate an account.
 lab7          -> Import an account.
 lab8          -> Export an account.
+lab9          -> Recover wallet and regenerate account.
 ```
 
 ---
