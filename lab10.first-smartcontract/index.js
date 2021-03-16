@@ -4,7 +4,7 @@ const algo = require('../config');
 
 async function start() {
     const bob = await algo.bob();
-
+    console.log(bob);
     // const addrCreator = algo.masterAddr;
 
     // await execSandbox(`goal wallet list`);
@@ -41,9 +41,9 @@ async function start() {
 
     await execSandbox(cmd);
 
-    // cmd = 'goal account list';
+    cmd = 'goal account list';
 
-    // await execSandbox(cmd);
+    await execSandbox(cmd);
 }
 
 async function exec(cmd) {
