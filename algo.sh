@@ -27,6 +27,7 @@ commandHelp()
     echo "lab7          -> Import an account."
     echo "lab8          -> Export an account."
     echo "lab9          -> Recover wallet and regenerate account."
+    echo "lab10         -> First smart-contract."
     echo    
 }
 
@@ -128,6 +129,10 @@ then
 elif [[ "$COMMAND" == "lab9" ]]
 then
     cd lab9.recover-wallet && node index.js
+
+elif [[ "$COMMAND" == "lab10" ]]
+then
+    cd lab10.first-smartcontract && node index.js
 
 else
    commandHelp
