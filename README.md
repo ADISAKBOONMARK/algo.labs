@@ -118,15 +118,3 @@ lab9          -> Recover wallet and regenerate account.
 ```
 
 ---
-
-## Donate :pray:
-
-**My Wallet:**
-
-![](./doc/my-wallet.jpg)
-
-**My QR-Code:**
-
-![](./doc/my-qr-code.jpg)
-
-**My Algorand Address:** GQT3W5URGDKYLGZJELLXMKQBIJBDEXFYNGYFIM7JSPY64DTHDKCVYQA3O4
